@@ -6,8 +6,8 @@ import co.com.centroEfectivo.boveda.events.CapacidadActualDeContenedorActualizad
 import co.com.centroEfectivo.boveda.events.ContenedorAgregado;
 import co.com.centroEfectivo.boveda.events.EfectivoAsociado;
 import co.com.centroEfectivo.boveda.values.*;
+import co.com.centroEfectivo.efectivo.values.EfectivoId;
 import co.com.sofka.domain.generic.AggregateEvent;
-
 
 import java.util.Objects;
 import java.util.Optional;
