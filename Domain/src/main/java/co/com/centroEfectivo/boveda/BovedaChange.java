@@ -35,6 +35,5 @@ public class BovedaChange extends EventChange {
                     ));
         });
 
-
     }
 }
