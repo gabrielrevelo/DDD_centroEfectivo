@@ -1,6 +1,7 @@
 package co.com.centroEfectivo.boveda.commands;
 
 import co.com.centroEfectivo.boveda.values.BovedaId;
+import co.com.centroEfectivo.efectivo.values.EfectivoId;
 import co.com.sofka.domain.generic.Command;
 
 public class AsociarEfectivo extends Command {
