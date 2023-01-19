@@ -4,15 +4,15 @@ import co.com.sofka.domain.generic.ValueObject;
 
 import java.util.Objects;
 
-public class CapacidadActual implements ValueObject<String> {
+public class CapacidadActual implements ValueObject<Integer> {
 
-    private final String value;
-    public CapacidadActual(String value){
+    private final Integer value;
+    public CapacidadActual(Integer value){
         this.value = Objects.requireNonNull(value);
     }
 
     @Override
-    public String value() {
+    public Integer value() {
         return value;
     }
 }
