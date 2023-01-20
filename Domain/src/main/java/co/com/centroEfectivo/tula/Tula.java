@@ -1,5 +1,6 @@
 package co.com.centroEfectivo.tula;
 
+import co.com.centroEfectivo.efectivo.values.EfectivoId;
 import co.com.centroEfectivo.tula.entities.Planilla;
 import co.com.centroEfectivo.tula.events.EfectivoAsociado;
 import co.com.centroEfectivo.tula.events.EstadoActualizado;

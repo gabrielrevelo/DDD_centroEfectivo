@@ -1,5 +1,6 @@
 package co.com.centroEfectivo.tula.commands;
 
+import co.com.centroEfectivo.efectivo.values.EfectivoId;
 import co.com.centroEfectivo.tula.values.TulaId;
 import co.com.sofka.domain.generic.Command;
 
