@@ -1,5 +1,6 @@
-package main.boveda;
+package co.com.centroEfectivo.boveda;
 
+import co.com.centroEfectivo.boveda.CrearBovedaUseCase;
 import co.com.centroEfectivo.boveda.commands.CrearBoveda;
 import co.com.centroEfectivo.boveda.events.BovedaCreada;
 import co.com.centroEfectivo.boveda.values.BovedaId;

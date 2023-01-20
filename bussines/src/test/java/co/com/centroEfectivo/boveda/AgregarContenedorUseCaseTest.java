@@ -1,4 +1,4 @@
-package main.boveda;
+package co.com.centroEfectivo.boveda;
 
 
 import co.com.centroEfectivo.boveda.commands.AgregarContendor;
@@ -9,7 +9,7 @@ import co.com.sofka.business.generic.UseCaseHandler;
 import co.com.sofka.business.repository.DomainEventRepository;
 import co.com.sofka.business.support.RequestCommand;
 import co.com.sofka.domain.generic.DomainEvent;
-import main.boveda.AgregarContenedorUseCase;
+import co.com.centroEfectivo.boveda.AgregarContenedorUseCase;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;

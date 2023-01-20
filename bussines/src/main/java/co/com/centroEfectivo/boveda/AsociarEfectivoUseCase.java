@@ -1,4 +1,4 @@
-package main.boveda;
+package co.com.centroEfectivo.boveda;
 
 
 import co.com.centroEfectivo.boveda.Boveda;

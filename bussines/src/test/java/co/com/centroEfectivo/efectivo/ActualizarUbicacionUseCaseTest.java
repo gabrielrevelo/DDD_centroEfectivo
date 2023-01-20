@@ -1,4 +1,5 @@
-package main.efectivo;
+package co.com.centroEfectivo.efectivo;
+
 
 import co.com.centroEfectivo.efectivo.commands.ActualizarUbicacion;
 import co.com.centroEfectivo.efectivo.events.EfectivoCreado;
