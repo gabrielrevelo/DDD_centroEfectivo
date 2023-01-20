@@ -4,12 +4,12 @@ import co.com.centroEfectivo.boveda.values.BovedaId;
 import co.com.centroEfectivo.efectivo.values.EfectivoId;
 import co.com.sofka.domain.generic.Command;
 
-public class AsociarEfectivo extends Command {
+public class AsociarEfectivoABoveda extends Command {
 
     private final BovedaId bovedaId;
     private final EfectivoId efectivoId;
 
-    public AsociarEfectivo(BovedaId bovedaId, EfectivoId efectivoId) {
+    public AsociarEfectivoABoveda(BovedaId bovedaId, EfectivoId efectivoId) {
         this.bovedaId = bovedaId;
         this.efectivoId = efectivoId;
     }

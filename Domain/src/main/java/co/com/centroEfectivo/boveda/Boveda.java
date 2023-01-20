@@ -8,7 +8,9 @@ import co.com.centroEfectivo.boveda.events.EfectivoAsociado;
 import co.com.centroEfectivo.boveda.values.*;
 import co.com.centroEfectivo.efectivo.values.EfectivoId;
 import co.com.sofka.domain.generic.AggregateEvent;
+import co.com.sofka.domain.generic.DomainEvent;
 
+import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import java.util.Set;
@@ -32,11 +34,18 @@ public class Boveda extends AggregateEvent<BovedaId> {
 
     }
 
-    public void agregarContenedor(ContenedorId contenedorId, CapacidadMaxima capacidadMaxima, CapacidadActual capacidadActual){
+    public static Boveda from(BovedaId bovedaId, List<DomainEvent> events){
+        var boveda = new Boveda(bovedaId);
+        events.forEach(boveda::applyEvent);
+        return boveda;
+    }
+
+    public void agregarContenedor(BovedaId bovedaId,ContenedorId contenedorId, CapacidadMaxima capacidadMaxima, CapacidadActual capacidadActual){
         Objects.requireNonNull(contenedorId);
         Objects.requireNonNull(capacidadActual);
         Objects.requireNonNull(capacidadMaxima);
-        appendChange(new ContenedorAgregado(contenedorId,capacidadMaxima,capacidadActual)).apply();
+        Objects.requireNonNull(bovedaId);
+        appendChange(new ContenedorAgregado(bovedaId,contenedorId,capacidadMaxima,capacidadActual)).apply();
     }
 
     public void actualizarCapacidadActualDeUnContenedor(ContenedorId contenedorId,CapacidadActual capacidadActual){
@@ -50,8 +59,8 @@ public class Boveda extends AggregateEvent<BovedaId> {
                 .findFirst();
     }
 
-    public void asociarEfectivoId(EfectivoId efectivoId){
-        appendChange(new EfectivoAsociado(efectivoId)).apply();
+    public void asociarEfectivoId(BovedaId bovedaId,EfectivoId efectivoId){
+        appendChange(new EfectivoAsociado(bovedaId,efectivoId)).apply();
     }
 
 

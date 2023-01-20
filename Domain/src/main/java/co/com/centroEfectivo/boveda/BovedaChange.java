@@ -21,6 +21,7 @@ public class BovedaChange extends EventChange {
            boveda.efectivoId = event.getEfectivoId();
         });
 
+
         apply((CapacidadActualDeContenedorActualizada event) -> {
           var contenedor =  boveda.getContenedorPorId(event.getContenedorId())
                   .orElseThrow(()-> new IllegalArgumentException("No se encuentra la función de la persona"));

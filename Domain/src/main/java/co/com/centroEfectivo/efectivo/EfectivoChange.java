@@ -13,12 +13,10 @@ public class EfectivoChange extends EventChange {
 
         apply((EfectivoCreado event) -> {
             efectivo.cantidad = event.getCantidad();
-            efectivo.cliente = event.getCliente();
             efectivo.ubicacion = event.getUbicacion();
         });
 
         apply((UbicacionActualizada event) -> {
-
             efectivo.ubicacion = event.getUbicacion();
         });
 

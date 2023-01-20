@@ -18,7 +18,7 @@ public class Ubicacion implements ValueObject<Ubicacion.UbicacionEnum> {
     }
 
 
-    enum UbicacionEnum{
+    public enum UbicacionEnum{
         TULA,
         BOVEDA
     }
