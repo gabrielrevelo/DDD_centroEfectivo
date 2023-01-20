@@ -10,20 +10,19 @@ public class CrearEfectivo extends Command {
 
 
     private final EfectivoId efectivoId;
-    private final Cliente cliente;
+
     private final Cantidad cantidad;
     private final Ubicacion ubicacion;
 
-    public CrearEfectivo(EfectivoId efectivoId, Cliente cliente, Cantidad cantidad, Ubicacion ubicacion) {
+    public CrearEfectivo(EfectivoId efectivoId, Cantidad cantidad, Ubicacion ubicacion) {
         this.efectivoId = efectivoId;
-        this.cliente = cliente;
+
         this.cantidad = cantidad;
         this.ubicacion = ubicacion;
     }
 
     public EfectivoId getEfectivoId() {return efectivoId;}
 
-    public Cliente getCliente() {return cliente;}
 
     public Cantidad getCantidad() {return cantidad;}
 

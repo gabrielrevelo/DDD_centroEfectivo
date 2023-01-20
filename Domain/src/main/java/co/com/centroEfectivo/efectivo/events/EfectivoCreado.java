@@ -8,20 +8,16 @@ import co.com.sofka.domain.generic.DomainEvent;
 
 public class EfectivoCreado extends DomainEvent {
 
-    private final Cliente cliente;
     private final Cantidad cantidad;
     private final Ubicacion ubicacion;
-    public EfectivoCreado(Cliente cliente, Cantidad cantidad, Ubicacion ubicacion) {
+    public EfectivoCreado( Cantidad cantidad, Ubicacion ubicacion) {
 
         super("co.com.centroEfectivo.efectivo.events.EfectivoCreado");
         this.cantidad = cantidad;
-        this.cliente = cliente;
         this.ubicacion = ubicacion;
     }
 
     public Ubicacion getUbicacion() {return ubicacion;}
-
-    public Cliente getCliente() {return cliente;}
 
     public Cantidad getCantidad() {return cantidad;}
 }
