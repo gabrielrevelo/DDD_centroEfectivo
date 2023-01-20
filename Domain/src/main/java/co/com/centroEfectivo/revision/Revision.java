@@ -36,8 +36,8 @@ public class Revision extends AggregateEvent<RevisionId> {
         return revision;
     }
 
-    public void agregarCajero(CajeroId cajeroId, Nombre nombre) {
-        Objects.requireNonNull(cajeroId);
+    public void agregarCajero(Nombre nombre) {
+        var cajeroId = new CajeroId();
         Objects.requireNonNull(nombre);
         appendChange(new CajeroAgregado(cajeroId, nombre)).apply();
     }
