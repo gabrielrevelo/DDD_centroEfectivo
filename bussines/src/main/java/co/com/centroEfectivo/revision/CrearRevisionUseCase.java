@@ -1,4 +1,4 @@
-package co.com.centroEfectivo;
+package co.com.centroEfectivo.revision;
 
 import co.com.centroEfectivo.revision.Revision;
 import co.com.centroEfectivo.revision.commands.AgregarCajero;

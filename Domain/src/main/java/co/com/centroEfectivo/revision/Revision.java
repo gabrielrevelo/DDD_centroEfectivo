@@ -42,8 +42,8 @@ public class Revision extends AggregateEvent<RevisionId> {
         appendChange(new CajeroAgregado(cajeroId, nombre)).apply();
     }
 
-    public void agregarReporte(ReporteId reporteId, Fecha fecha, Novedad novedad) {
-        Objects.requireNonNull(reporteId);
+    public void agregarReporte(Fecha fecha, Novedad novedad) {
+        var reporteId = new ReporteId();
         Objects.requireNonNull(fecha);
         Objects.requireNonNull(novedad);
         appendChange(new ReporteAgregado(reporteId, fecha, novedad)).apply();

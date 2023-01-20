@@ -29,8 +29,3 @@ public class Estado implements ValueObject<EstadoEnum> {
     }
 }
 
-enum EstadoEnum {
-    INGRESADA,
-    EN_PROCESO,
-    PROCESADA
-}

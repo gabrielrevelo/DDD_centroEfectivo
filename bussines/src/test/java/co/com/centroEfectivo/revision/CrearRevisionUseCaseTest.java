@@ -1,5 +1,6 @@
-package co.com.centroEfectivo;
+package co.com.centroEfectivo.revision;
 
+import co.com.centroEfectivo.revision.CrearRevisionUseCase;
 import co.com.centroEfectivo.revision.commands.CrearRevision;
 import co.com.centroEfectivo.revision.events.RevisionCreada;
 import co.com.centroEfectivo.revision.values.Cubiculo;
