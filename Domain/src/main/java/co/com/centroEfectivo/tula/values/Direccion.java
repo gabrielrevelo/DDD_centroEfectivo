@@ -1,22 +1,16 @@
-package co.com.centroEfectivo.revision.values;
+package co.com.centroEfectivo.tula.values;
 
 import co.com.sofka.domain.generic.ValueObject;
 
 import java.util.Objects;
 
-public class Novedad implements ValueObject<String> {
+public class Direccion implements ValueObject<String> {
     private final String value;
 
-    public Novedad (String value) {
+    public Direccion(String value) {
         this.value = Objects.requireNonNull(value);
         if(this.value.isBlank()) {
             throw new IllegalArgumentException("El nombre no puede estar vacio");
-        }
-        if(this.value.length() <= 4) {
-            throw new IllegalArgumentException("Debe tener al menos 5 caracteres");
-        }
-        if(this.value.length() >= 50) {
-            throw new IllegalArgumentException("Debe tener menos de 50 caracteres");
         }
     }
 
@@ -28,8 +22,8 @@ public class Novedad implements ValueObject<String> {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Novedad novedad = (Novedad) o;
-        return Objects.equals(value, novedad.value);
+        Direccion direccion = (Direccion) o;
+        return Objects.equals(value, direccion.value);
     }
 
     @Override

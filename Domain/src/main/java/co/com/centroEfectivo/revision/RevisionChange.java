@@ -5,6 +5,7 @@ import co.com.centroEfectivo.revision.entities.Reporte;
 import co.com.centroEfectivo.revision.events.CajeroAgregado;
 import co.com.centroEfectivo.revision.events.ReporteAgregado;
 import co.com.centroEfectivo.revision.events.RevisionCreada;
+import co.com.centroEfectivo.revision.events.TulaAsociada;
 import co.com.sofka.domain.generic.EventChange;
 
 public class RevisionChange extends EventChange {
@@ -15,7 +16,7 @@ public class RevisionChange extends EventChange {
         });
 
         apply((TulaAsociada event) -> {
-            revision.tulaId() = event.getTulaId();
+            revision.tulaId = event.getTulaId();
         });
 
         apply((CajeroAgregado event) -> {

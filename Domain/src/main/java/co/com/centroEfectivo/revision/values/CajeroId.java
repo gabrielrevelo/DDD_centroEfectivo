@@ -13,7 +13,7 @@ public class CajeroId extends Identity {
     }
 
     public static CajeroId of(String id) {
-        return new PersonaId(id);
+        return new CajeroId(id);
     }
 
 }

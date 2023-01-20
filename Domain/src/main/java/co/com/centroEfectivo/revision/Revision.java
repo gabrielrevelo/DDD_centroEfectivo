@@ -5,7 +5,9 @@ import co.com.centroEfectivo.revision.entities.Reporte;
 import co.com.centroEfectivo.revision.events.CajeroAgregado;
 import co.com.centroEfectivo.revision.events.ReporteAgregado;
 import co.com.centroEfectivo.revision.events.RevisionCreada;
+import co.com.centroEfectivo.revision.events.TulaAsociada;
 import co.com.centroEfectivo.revision.values.*;
+import co.com.centroEfectivo.tula.values.TulaId;
 import co.com.sofka.domain.generic.AggregateEvent;
 import co.com.sofka.domain.generic.DomainEvent;
 
@@ -13,7 +15,7 @@ import java.util.List;
 import java.util.Objects;
 
 public class Revision extends AggregateEvent<RevisionId> {
-    //protected TulaId tulaId;
+    protected TulaId tulaId;
     protected Reporte reporte;
     protected Cajero cajero;
     protected Cubiculo cubiculo;

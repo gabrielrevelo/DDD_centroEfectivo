@@ -1,6 +1,7 @@
 package co.com.centroEfectivo.revision.commands;
 
 import co.com.centroEfectivo.revision.values.RevisionId;
+import co.com.centroEfectivo.tula.values.TulaId;
 import co.com.sofka.domain.generic.Command;
 
 public class AsociarTula extends Command {
