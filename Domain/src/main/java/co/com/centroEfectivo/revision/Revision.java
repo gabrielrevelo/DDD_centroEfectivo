@@ -36,14 +36,14 @@ public class Revision extends AggregateEvent<RevisionId> {
         return revision;
     }
 
-    public void agregarCajero(CajeroId cajeroId, Nombre nombre) {
-        Objects.requireNonNull(cajeroId);
+    public void agregarCajero(Nombre nombre) {
+        var cajeroId = new CajeroId();
         Objects.requireNonNull(nombre);
         appendChange(new CajeroAgregado(cajeroId, nombre)).apply();
     }
 
-    public void agregarReporte(ReporteId reporteId, Fecha fecha, Novedad novedad) {
-        Objects.requireNonNull(reporteId);
+    public void agregarReporte(Fecha fecha, Novedad novedad) {
+        var reporteId = new ReporteId();
         Objects.requireNonNull(fecha);
         Objects.requireNonNull(novedad);
         appendChange(new ReporteAgregado(reporteId, fecha, novedad)).apply();
