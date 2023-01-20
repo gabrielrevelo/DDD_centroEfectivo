@@ -34,8 +34,8 @@ public class Tula extends AggregateEvent<TulaId> {
        return tula;
     }
 
-    public void agregarPlanilla(PlanillaId planillaId, Fecha fecha, Direccion direccion) {
-        Objects.requireNonNull(planillaId);
+    public void agregarPlanilla(Fecha fecha, Direccion direccion) {
+        var planillaId = new PlanillaId();
         Objects.requireNonNull(fecha);
         Objects.requireNonNull(direccion);
         appendChange(new PlanillaAgregada(planillaId, fecha, direccion)).apply();
